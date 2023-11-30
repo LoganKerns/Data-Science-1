@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<script src="https://d3js.org/d3.v4.js"></script>
+<body>
+<h2>D3.js Scatter-Plot</h2>
+
+<svg id="myPlot" style="width:500px;height:500px"></svg>
+
+<script>
+// Set Dimensions
+const xSize = 500; 
+const ySize = 500;
+const margin = 40;
+const xMax = xSize - margin*2;
+const yMax = ySize - margin*2;
+
+// Read data from "worldcities.csv" and filter the first 100 rows
+d3.csv("Data-Science-1/CodeTemplates/JS/worldcities.csv").then(function(data) {
+
+}).catch(function(error) {
+  console.error('Error loading data:', error);
+});
+</script>
+
+</body>
+</html>
