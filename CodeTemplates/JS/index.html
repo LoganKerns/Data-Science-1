@@ -1,26 +1,28 @@
 <!DOCTYPE html>
-<html>
-<script src="https://d3js.org/d3.v4.js"></script>
+<html lang="en">
+<head>
+  <script src="https://d3js.org/d3.v4.js"></script>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
 <body>
-<h2>D3.js Scatter-Plot</h2>
+  <h2 id="datetime">Loading date and time...</h2> <!-- Date and Time display -->
 
-<svg id="myPlot" style="width:500px;height:500px"></svg>
+  <h1>Which feature has a larger effect on the human population, latitude or elevation?</h1>
+  <!-- Existing content -->
+  <h1>Consider bustling cities like New York, London, Tokyo, and Paris—all situated within 200 feet above sea level in the northern hemisphere. Elevation and latitude, key factors in civilization development, take the spotlight in untangling this geographical narrative. With a background in geography and history, my exploration aims to decipher whether elevation or latitude holds a more substantial sway over human population distribution. Beyond maps and statistics, this journey seeks to expose the dynamics that have shaped societies. Whether you're a geography enthusiast or just curious about the world, this investigation delves into the interplay between elevation, latitude, and the growth of civilizations. Scroll down to uncover the answers and discern if elevation or latitude emerges as the primary force shaping human habitation patterns.</h1>
+  <!-- Existing content continues -->
+  <h1>Let's take a look at the largest city in the world, Tokyo.
+    <img src="Tokyo.jpg">
+    The Tokyo metro area has an astounding population of 40.8 million people. It is hard to successfully grasp this amount of people living inside a single urbanized area. To put this into perspective, this is more people than the entire countries of both Australia and Canada. Unsurprisingly, Tokyo only sits at a meager elevation of 137 feet above sea level and much of the city lies directly on the coast. This is largely the reason that Tokyo was able to become the most populous city on the planet. Another geographical feature of Tokyo is its latitude. Tokyo lies at about 35 degrees north. This means that Tokyo lies directly in the temperate zone. As such, the temperatures in Tokyo rarely get below freezing and rarely get above 100F or 38C. Tokyo also receives plentiful precipitation in the form of rain and hardly ever sees snow. These factors combine to create an extremely desirable climate to create a metropolis.
+  </h1>
+  <!-- Existing content continues -->
+  <h1>My Visualizations</h1>
+  <div id="scatterplot"></div>
+  <script src="script.js"></script>
+  <!-- End of Scatter plot visualization code -->
 
-<script>
-// Set Dimensions
-const xSize = 500; 
-const ySize = 500;
-const margin = 40;
-const xMax = xSize - margin*2;
-const yMax = ySize - margin*2;
-
-// Read data from "worldcities.csv" and filter the first 100 rows
-d3.csv("Data-Science-1/CodeTemplates/JS/worldcities.csv").then(function(data) {
-
-}).catch(function(error) {
-  console.error('Error loading data:', error);
-});
-</script>
-
+  <h1>My Answer</h1>
+  <!-- Existing content continues -->
 </body>
 </html>
