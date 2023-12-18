@@ -1,38 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Scatter Plot Visualization</title>
   <script src="https://d3js.org/d3.v4.js"></script>
   <link rel="stylesheet" type="text/css" href="style.css">
-  <style>
-    body {
-      font: 15px sans-serif;
-    }
-
-    .tooltip {
-      position: absolute;
-      background-color: white;
-      color: black;
-      border: 1px solid #000;
-      border-radius: 5px;
-      padding: 5px;
-      opacity: 0; /* Hide the tooltip initially */
-      pointer-events: none; /* Ignore pointer events */
-      transition: opacity 0.3s; /* Smooth transition for the tooltip */
-    }
-
-    .axis path,
-    .axis line {
-      fill: none;
-      stroke: #000;
-      shape-rendering: crispEdges;
-    }
-
-    .dot {
-      stroke: #000;
-    }
-  </style>
 </head>
 
 <body>
@@ -41,132 +11,35 @@
   <h1>Which feature has a larger effect on the human population, latitude or elevation?</h1>
   <!-- Existing content -->
   <h1>Consider bustling cities like New York, London, Tokyo, and Paris—all situated within 200 feet above sea level in the northern hemisphere. Elevation and latitude, key factors in civilization development, take the spotlight in untangling this geographical narrative. With a background in geography and history, my exploration aims to decipher whether elevation or latitude holds a more substantial sway over human population distribution. Beyond maps and statistics, this journey seeks to expose the dynamics that have shaped societies. Whether you're a geography enthusiast or just curious about the world, this investigation delves into the interplay between elevation, latitude, and the growth of civilizations. Scroll down to uncover the answers and discern if elevation or latitude emerges as the primary force shaping human habitation patterns.</h1>
-  <!-- Existing content continues -->
+  <h1>As a globe-trotting journalist on a captivating mission, I am traversing the world to unravel a geographical mystery: Does elevation or latitude exert a more significant influence on human population distribution? My journey takes me from the dizzying heights of mountain cities to the vast, flat expanses of coastal metropolises, and into the heart of remote communities. Along the way, I am engaging with diverse cultures and environments, seeking insights from experts and locals alike. My quest is to piece together this complex puzzle, examining how these two fundamental aspects of geography shape the way we live, work, and build our communities. This exploration isn't just about numbers and statistics; it's a story of human adaptability and resilience in the face of nature's grand design.</h1>
   <h1>Let's take a look at the largest city in the world, Tokyo.
     <img src="Tokyo.jpg">
-    The Tokyo metro area has an astounding population of 40.8 million people. It is hard to successfully grasp this amount of people living inside a single urbanized area. To put this into perspective, this is more people than the entire countries of both Australia and Canada. Unsurprisingly, Tokyo only sits at a meager elevation of 137 feet above sea level and much of the city lies directly on the coast. This is largely the reason that Tokyo was able to become the most populous city on the planet. Another geographical feature of Tokyo is its latitude. Tokyo lies at about 35 degrees north. This means that Tokyo lies directly in the temperate zone. As such, the temperatures in Tokyo rarely get below freezing and rarely get above 100F or 38C. Tokyo also receives plentiful precipitation in the form of rain and hardly ever sees snow. These factors combine to create an extremely desirable climate to create a metropolis.
+    The Reporting from the bustling heart of Japan, I stand amidst the sprawling Tokyo metro area, home to a staggering 40.8 million souls. This figure, surpassing the entire population of countries like Australia and Canada, is almost unfathomable. As a traveling journalist exploring the interplay of geography and urban growth, Tokyo's story is particularly intriguing. Nestled at a modest elevation of just 137 feet above sea level, with vast stretches of the city hugging the coastline, Tokyo's geographical positioning is a key factor in its growth to become the world's most populous city. The city's latitude, at approximately 35 degrees north, places it squarely in the temperate zone. This geographic sweet spot blesses Tokyo with a climate that's rarely too harsh; temperatures seldom dip below freezing or soar above 100F (38C). The city is also favored with ample rainfall, yet it's spared from heavy snowfall. It's this combination of mild temperatures and abundant precipitation, alongside its low elevation, that makes Tokyo's climate exceptionally conducive for sustaining a large population. Here, where the city's heartbeat syncs with the rhythms of the sea and the temperate winds, one can truly witness the profound impact of latitude and elevation on human settlement and urban proliferation.
   </h1>
-  <!-- Existing content continues -->
-  <h1>My Visualizations</h1>
-  <div id="scatterplot"></div> <!-- Scatter plot visualization -->
+  <h1>Next, we will transition to a city of extreme latitude.  This will illustrate the enormous effect that latitude has on ctiy-building.
+    <img src="Yakutsk.jpg" style="display: block; margin-left: auto; margin-right: auto; width: 75%;">
+    As a traveling journalist, I've encountered the profound impacts of latitude and elevation on human settlements, exemplified strikingly in Yakutsk, Siberia. Perched at a daunting 62 degrees north, Yakutsk is a testament to human resilience in one of the coldest large cities on Earth. Here, the extreme latitude shapes every facet of life, with winter temperatures often diving below -40°C, turning it into a landscape more reminiscent of another planet than our own. The deep freeze extends not just across the city's landscapes but into the very rhythm of life, influencing everything from infrastructure to daily routines. Buildings stand on specialized foundations to combat permafrost, while the local economy and social life revolve around adapting to these prolonged, frigid months. Yakutsk's isolation, compounded by its challenging geography, makes transportation and logistics a Herculean task, driving up living costs and limiting accessibility. Yet, amidst these stark conditions, there's a resilient community spirit, a vivid illustration of human adaptability. My journey here illuminates the stark reality of how geography - specifically latitude - can sculpt human existence, setting the stage for a unique interplay between environment and culture.
+  </h1>
+  <h1>Lastly, we are going to analyze the city of La Paz in Bolivia.  This will showcase the staggering effects of elevation on a large population center.
+    <img src="LaPaz.jpg" style="display: block; margin-left: auto; margin-right: auto; width: 80%;">
+    In the culmination of my global odyssey to discern the impact of geography on urban life, I find myself in La Paz, Bolivia, a city that literally takes one's breath away with its staggering elevation. Perched at around 3,640 meters (11,942 feet) above sea level, La Paz stands as one of the highest capitals in the world, presenting a stark contrast to the coastal and temperate cities I've traversed. Here, the elevation molds every aspect of existence, from the physiological to the cultural. The thin air challenges newcomers with altitude sickness, a stark reminder of nature's omnipresence. Yet, the city thrives, nestled in a dramatic canyon with the majestic Illimani mountain as its backdrop. La Paz's elevation influences its architecture, cuisine, and even transportation, with aerial cable cars crisscrossing the sky, offering a solution to the steep terrain. The city's markets brim with colorful Andean produce adapted to high-altitude growth, underscoring how local agriculture has ingeniously adapted to the heights. The resilience of La Paz and its inhabitants encapsulates the essence of my journey, showcasing how elevation profoundly shapes the human spirit and community life, forging cities that defy not just gravity, but expectations.
+  </h1>
 
-  <h1>My Answer</h1>
-  <!-- Existing content continues -->
+  <h1>Alright, I am finally home from my "vacation", and I have compiled some data for us to analyze.  Here is a bar graph that depicts the cumulative population of the top 100 cities in each elevation range in 100 million. 
+    <img src="Bar.jpg" style="display: block; margin-left: auto; margin-right: auto; width: 80%;">
+    Look at the first bar.  Notice how it dwarfs every other bar?  It is saying that there are over 800 million people living in the top 100 cities below 500 feet elevation.  This graph is a great visualizion of the exponential effect that elevation has on population.  Elevation plays a crucial role in population distribution by affecting various aspects of life, including climate, agriculture, and trade accessibility. Higher elevations often bring colder temperatures and reduced oxygen levels, making living conditions more challenging. This can limit agricultural productivity and impact the overall livability of the region. Additionally, elevated areas are often farther from oceans and rivers, which are vital for trade and transportation. Increased distance from these waterways can make trade more difficult, leading to isolation and reduced economic opportunities for the population. Despite these challenges, some cities at higher elevations adapt and thrive through innovative solutions, showcasing the complex interplay between elevation and human settlement patterns.
+  </h1>
+  <h1>Now, it's time to visualize latitude.  This graph, just like the last one, will show the population of the top 100 cities in different latitudinal sectors in hundres of millions.
+    <img src="Lat.jpg" style="display: block; margin-left: auto; margin-right: auto; width: 80%;">
+    When looking at this graph, two things stand out, the bars of 10-30, and 30-50.  This latitude range is sort of a goldilocks zone for humans.  It encompasses the northern sections of the tropical zone and a large portion of the temperate zone.  Both of these zones are arguably the best areas for human habitation.  For example, the temperate zone generally has warm summers and cool to cold winters.  This allows crops to grow but doesn't allow tropical diseases to fester.  The tropical zone has warm temperatures years round which allows from plentiful agriculture but potent tropical diseases and animals are a problem.
+  </h1>
+  <h1>This scatter plot shows the elevation and latitude of the 100 most populous cities.
+  <div id="scatterplot"></div>
+  When analyzing the graph, there is a large concecntration of cities around between 10-50 degrees north and all at low elevation.  This compliments the data shown by the previous graphs.  The average elevation of the 100 most populous cities is 782 feet.  This is value is already fairly low, but is scewed by a few high elevation outliers.  Therefore, most cities are low elevation.  The average latitude of the 100 most populous cities is 24.5 degrees north.  This is pretty much in the middle of the goldilocks zone that was identified earlier.
+  </h1>
+  <script src="script.js"></script>
 
-  <script>
-    // Function to show date and time
-    function showDateTime() {
-      setInterval(function() {
-        var currentDateTime = new Date().toLocaleString();
-        document.getElementById('datetime').innerHTML = currentDateTime;
-      }, 1000);
-    }
-
-    // Fade-in effect function
-    function fadeIn(element, duration) {
-      var opacity = 0;
-      var interval = 50;
-      var increment = interval / duration;
-
-      var fading = setInterval(function() {
-        opacity += increment;
-        if (opacity >= 1) {
-          opacity = 1;
-          clearInterval(fading);
-        }
-        element.style.opacity = opacity;
-      }, interval);
-    }
-
-    // Data for the x-axis and y-axis
-    const dataX = [
-    35.6897, -6.175, 28.61, 23.13, 19.0761, 14.5958, 31.1667, -23.55,
-    37.56, 19.4333, 30.0444, 40.6943, 23.7639, 39.904, 22.5675, 13.7525,
-    22.535, 55.7558, -34.5997, 6.455, 41.0136, 24.86, 12.9789, 10.7756,
-    34.6939, 30.66, 35.6892, -4.325, -22.9111, 13.0825, 34.2667, 31.5497,
-    29.55, 34.1141, 38.8671, 51.5072, 48.8567, 35.1041, 23.0475, 17.385,
-    39.1467, -12.06, 30.5872, 32.9987, 30.25, 23.0292, 35.1833, 25.0375,
-    34.261, -8.8383, 33.625, 25.8292, 3.1478, 35.2333, 24.9139, 41.8375,
-    32.0608, 35.4, 21.0283, 18.5203, 32.8986, 23.03, -26.2044, 4.7111,
-    -6.8161, 41.8025, 15.5006, 34.4259, 38.3037, 22.3, 27.2418, 21.1967,
-    33.3936, 26.8968, 24.6333, 32.9773, -33.4372, 37.0659, 22.335,
-    27.3019, 28.4419, 27.705, 21.1702, -7.2458, 30.45, 21.6618, 30.7991,
-    32.1264, 40.4169, 33.3153, 25.5102, 23.5533, 1.3, 25.4358, 36.45,
-    38.9, 22.6293, 29.0397, 36.1167
-    ];
-
-    const dataY = [
-    131, 26, 984, 69, 46, 52, 13, 2493, 125, 7349, 75, 33, 105, 143, 30, 5,
-    13, 512, 82, 135, 131, 33, 3018, 62, 31, 1612, 4144, 790, 7, 22, 1329, 712,
-    801, 305, 82, 36, 115, 244, 26, 1778, 16, 444, 121, 430, 62, 52, 75, 679,
-    114, 20, 151, 69, 72, 168, 69, 526, 66, 141, 40, 1837, 102, 174, 5751, 8612,
-    228, 180, 1250, 164, 42, 190, 712, 69, 10, 243, 1969, 292, 1870, 249, 95,
-    4826, 263, 2838, 43, 16, 82, 95, 1115, 372, 2156, 112, 6145, 26, 37, 322,
-    115, 95, 3556, 115, 21
-    ];
-
-    // Combine the data into a single dataset
-    const dataset = dataX.map((x, i) => ({ x: x, y: dataY[i] }));
-
-    // Set the dimensions and margins of the graph
-    var margin = { top: 10, right: 30, bottom: 35, left: 60 },
-        width = 960 - margin.left - margin.right,
-        height = 500 - margin.top - margin.bottom;
-
-    // Append the svg object to the body of the page
-    var svg = d3.select("#scatterplot")
-        .append("svg")
-        .attr("width", width + margin.left + margin.right)
-        .attr("height", height + margin.top + margin.bottom)
-        .append("g")
-        .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
-
-    // Create scales
-    var x = d3.scaleLinear().domain([-60, 60]).range([0, width]);
-    var y = d3.scaleLinear().domain([0, 10000]).range([height, 0]);
-
-    // Create a div for the tooltip and hide it
-    var tooltip = d3.select("body").append("div")
-        .attr("class", "tooltip")
-        .style("opacity", 0);
-
-    // Add X and Y axis
-    var xAxis = svg.append("g")
-        .attr("transform", "translate(0," + height + ")")
-        .call(d3.axisBottom(x));
-
-    var yAxis = svg.append("g")
-        .call(d3.axisLeft(y));
-
-    // Add dots and tooltip logic
-    svg.selectAll(".dot")
-        .data(dataset)
-        .enter()
-        .append("circle")
-        .attr("class", "dot")
-        .attr("cx", function(d) { return x(d.x); })
-        .attr("cy", function(d) { return y(d.y); })
-        .attr("r", 3.5)
-        .style("fill", "rgb(45, 165, 195)")
-        .on("mouseover", function(event, d) {
-            tooltip.transition()
-                .duration(200)
-                .style("opacity", .9);
-            tooltip.html("Latitude: " + d.x + "<br>Elevation: " + d.y)
-                .style("left", (event.pageX + 5) + "px")
-                .style("top", (event.pageY - 28) + "px");
-        })
-        .on("mouseout", function(d) {
-            tooltip.transition()
-                .duration(500)
-                .style("opacity", 0);
-        });
-
-    // Call the fade-in function and the date-time function when the window loads
-    window.onload = function() {
-        fadeIn(document.body, 2000);
-        showDateTime();
-    };
-  </script>
+  <h1>Having completed my extensive journey around the world, a quest driven by the pursuit of understanding the fundamental forces that shape human habitation, I can unequivocally conclude that elevation exerts a more profound influence on population distribution than latitude. While both elevation and latitude play pivotal roles in shaping the dynamics of human societies, elevation stands out as the primary determinant. One of the key factors contributing to this conclusion is the impact of elevation on trade and accessibility. High elevations often result in increased distance from oceans and rivers, making transportation more challenging and expensive. This impediment to trade and connectivity can limit economic opportunities and deter population growth. Moreover, elevated regions frequently experience harsher climates, which can pose additional challenges to sustaining large populations. In contrast, latitude, while influential, tends to have a more gradual effect on climate and can be mitigated through adaptation. As I reflect on my journey, it becomes evident that elevation's multifaceted influence on geography, climate, and infrastructure significantly shapes the distribution and growth of civilizations, making it the paramount factor in the intricate relationship between elevation and population.</h1>
+  <h1>Wow, that was an incredible and informational journey around the world and through my data.  Now that my question has been answered, I am left with a question for you guys.  How might the interplay between elevation and latitude continue to shape the future of human civilization in an era marked by environmental challenges and technological advancements?</h1>
 </body>
 </html>

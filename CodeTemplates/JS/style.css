@@ -2,7 +2,8 @@ body {
   background-color: black;
   color: white;
   text-align: center;
-  margin: 40px; /* Large margins */
+  margin: 40px; /* Large margins around the entire content */
+  padding: 200px; /* Additional padding for larger side margins */
 }
 
 .tooltip {
